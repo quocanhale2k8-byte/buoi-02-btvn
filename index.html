@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>An - Workshop nến thơm</title>
+</head>
+<body>
+    <header>
+        <h1>An - Workshop nến thơm</h1>
+        <nav aria-label="Điều hướng chính">
+            <a href="#gioi-thieu">Giới thiệu</a> |
+            <a href="#bang-gia">Bảng giá</a> |
+            <a href="#hinh-anh">Hình ảnh</a> |
+            <a href="#dang-ky">Đăng ký</a>
+        </nav>
+    </header>
+    <main>
+        <section id="gioi-thieu">
+            <h2>Một buổi tự tay làm nến</h2>
+            <p>Nếu bạn muốn thử một hoạt động mới vào cuối tuần, hãy cùng An làm một chiếc nến thơm. Bạn sẽ được chọn mùi hương, đổ sáp và trang trí chiếc nến theo ý thích.</p>
+            <h3>Bạn sẽ làm gì tại workshop?</h3>
+            <ul>
+                <li>Tìm hiểu những dụng cụ và nguyên liệu làm nến.</li>
+                <li>Chọn tinh dầu và tập phối mùi hương.</li>
+                <li>Đổ nến, trang trí và mang sản phẩm về nhà.</li>
+            </ul>
+            <h3>Các bước tham gia</h3>
+            <ol>
+                <li>Chọn gói trải nghiệm trong bảng giá.</li>
+                <li>Điền thông tin đăng ký và ngày tham gia.</li>
+                <li>Đến workshop và làm nến theo hướng dẫn.</li>
+            </ol>
+        </section>
+        <section id="bang-gia">
+            <h2>Bảng giá workshop</h2>
+            <table border="1">
+                <caption>Các gói trải nghiệm làm nến</caption>
+                <thead>
+                    <tr><th scope="col">Gói</th><th scope="col">Hoạt động</th><th scope="col">Sản phẩm mang về</th><th scope="col">Giá mỗi người</th></tr>
+                </thead>
+                <tbody>
+                    <tr><th scope="row">Làm quen</th><td>Làm nến với mùi hương có sẵn</td><td>Một nến 100 g và hộp giấy</td><td>250.000 đồng</td></tr>
+                    <tr><th scope="row">Tự phối hương</th><td>Chọn và phối tinh dầu theo sở thích</td><td>Một nến 200 g và thẻ ghi tên</td><td>350.000 đồng</td></tr>
+                    <tr><th scope="row">Quà tặng</th><td>Làm nến, sáp thơm và trang trí hộp quà</td><td>Một nến 200 g, một sáp thơm và hộp quà</td><td>450.000 đồng</td></tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="hinh-anh">
+            <h2>Hình ảnh workshop</h2>
+            <figure><img src="images/nen1.png" alt="Ảnh minh họa nến thơm số 1" width="280"><figcaption>Một góc nến thơm.</figcaption></figure>
+            <figure><img src="images/nen2.png" alt="Ảnh minh họa nến thơm số 2" width="280"><figcaption>Tham khảo ý tưởng làm nến.</figcaption></figure>
+            <figure><img src="images/nen3.png" alt="Ảnh minh họa nến thơm số 3" width="280"><figcaption>Cảm hứng cho buổi workshop.</figcaption></figure>
+        </section>
+        <section id="dang-ky">
+            <h2>Đăng ký tham gia</h2>
+            <p>Đây là form thực hành HTML, chưa gửi thông tin đến người tổ chức.</p>
+            <form action="#dang-ky" method="get">
+                <fieldset>
+                    <legend>Thông tin của bạn</legend>
+                    <p><label for="ho-ten">Họ và tên:</label><br><input type="text" id="ho-ten" name="ho_ten" autocomplete="name" required></p>
+                    <p><label for="email">Email:</label><br><input type="email" id="email" name="email" autocomplete="email" required></p>
+                    <p><label for="dien-thoai">Số điện thoại:</label><br><input type="tel" id="dien-thoai" name="dien_thoai" autocomplete="tel" required></p>
+                </fieldset>
+                <fieldset>
+                    <legend>Buổi trải nghiệm</legend>
+                    <p><label for="goi">Gói workshop:</label><br><select id="goi" name="goi" required><option value="">Chọn một gói</option><option value="lam-quen">Làm quen</option><option value="tu-phoi-huong">Tự phối hương</option><option value="qua-tang">Quà tặng</option></select></p>
+                    <p><label for="ngay">Ngày tham gia:</label><br><input type="date" id="ngay" name="ngay" required></p>
+                    <p><label for="so-nguoi">Số người (1 đến 10):</label><br><input type="number" id="so-nguoi" name="so_nguoi" min="1" max="10" value="1" required></p>
+                    <p>Khung giờ:<br><input type="radio" id="sang" name="khung_gio" value="sang" required><label for="sang">Sáng, 9:00–11:00</label><br><input type="radio" id="chieu" name="khung_gio" value="chieu"><label for="chieu">Chiều, 14:00–16:00</label></p>
+                    <p><label for="ghi-chu">Ghi chú:</label><br><textarea id="ghi-chu" name="ghi_chu" rows="4" cols="30" placeholder="Mùi hương bạn thích hoặc điều cần hỗ trợ"></textarea></p>
+                    <p><input type="checkbox" id="nhan-tin" name="nhan_tin" value="co"><label for="nhan-tin">Tôi muốn nhận tin về các buổi workshop tiếp theo.</label></p>
+                </fieldset>
+                <p><input type="submit" value="Đăng ký"><input type="reset" value="Nhập lại"></p>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Bài tập về nhà buổi 2 - Hà Lê Quốc An.</p>
+        <p>Nội dung workshop và giá dùng cho bài thực hành.</p>
+        <a href="#">Về đầu trang</a>
+    </footer>
+</body>
+</html>
